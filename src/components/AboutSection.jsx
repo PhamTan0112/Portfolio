@@ -31,7 +31,7 @@ export const AboutSecion = () => {
               </a>
 
               <a
-                href=""
+                href="/public/CV/Pham-Phu-Tan-TopCV.vn-280725.230213.pdf"
                 className="px-6 py-2 rounded-b-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 Download CV
