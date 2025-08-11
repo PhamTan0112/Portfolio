@@ -9,11 +9,21 @@ export const AboutSecion = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">
-              Passionate Web Developer & Tech Creator
-            </h3>
-            <p className="text-muted-foreground">one year</p>
-            <p>Intern SNP</p>
+            <h3 className="text-2xl font-semibold">Passionate Web Developer</h3>
+            <p className="text-muted-foreground">
+              4th-year IT student at the University of Transport and
+              Communications, Ho Chi Minh City Campus. Experienced in building
+              scalable and secure web applications, with hands-on contributions
+              to enterprise-level DevOps and fullstack projects.
+            </p>
+
+            <p className="text-muted-foreground">
+              Completed an internship at Saigon Newport Corporation (SNP),
+              optimizing CI/CD pipelines, containerization, system monitoring,
+              and deployment workflows. Known for persistence, adaptability, and
+              the ability to work continuously for extended periods to achieve
+              project goals.
+            </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
@@ -31,45 +41,44 @@ export const AboutSecion = () => {
 
           <div className="grid grid-cols-1 gap-6">
             <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4 ">
-                <div className="p-3 rounded-b-full bg-primary/10">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg"> Web Development</h4>
                   <p className="text-muted-foreground">
-                    Createting respnsive websites and web applications with
-                    morder framework
+                    Creating responsive websites and web applications with
+                    modern frameworks.
                   </p>
                 </div>
               </div>
             </div>
-
             <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4 ">
-                <div className="p-3 rounded-b-full bg-primary/10">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
                   <User className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
+                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
                   <p className="text-muted-foreground">
-                    Createting respnsive websites and web applications with
-                    morder framework
+                    Designing intuitive user interfaces and seamless user
+                    experiences.
                   </p>
                 </div>
               </div>
             </div>
-
             <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4 ">
-                <div className="p-3 rounded-b-full bg-primary/10">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
                   <Briefcase className="h-6 w-6 text-primary" />
                 </div>
+
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
+                  <h4 className="font-semibold text-lg">Project Management</h4>
                   <p className="text-muted-foreground">
-                    Createting respnsive websites and web applications with
-                    morder framework
+                    Leading projects from conception to completion with agile
+                    methodologies.
                   </p>
                 </div>
               </div>
