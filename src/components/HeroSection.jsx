@@ -23,14 +23,13 @@ export const HeroSection = () => {
               Tan
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            {" "}
-            Aspiring full-stack developer eager to apply my knowledge of
-            JavaScript and React.js in a practical setting while gaining
-            hands-on experience in software development. I am looking forward to
-            building a long-term collaboration with the company, and I hope to
-            continue contributing beyond the internship period if given the
-            opportunity.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
+            Driven and detail-oriented developer with proven experience
+            delivering high-quality projects in fast-paced, deadline-driven
+            environments. Recognized for maintaining peak performance during
+            extended work periods and bringing innovative problem-solving
+            approaches that set my work apart from peers. Committed to
+            consistently exceeding expectations and driving meaningful results.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
