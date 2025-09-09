@@ -11,18 +11,18 @@ export const AboutSecion = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">Passionate Web Developer</h3>
             <p className="text-muted-foreground">
-              4th-year IT student at the University of Transport and
-              Communications, Ho Chi Minh City Campus. Experienced in building
-              scalable and secure web applications, with hands-on contributions
-              to enterprise-level DevOps and fullstack projects.
+              Graduated in Information Technology from the University of
+              Transport and Communications, Ho Chi Minh City Campus. Skilled in
+              modern web development and eager to contribute to real-world web
+              projects.
             </p>
 
             <p className="text-muted-foreground">
-              Completed an internship at Saigon Newport Corporation (SNP),
-              optimizing CI/CD pipelines, containerization, system monitoring,
-              and deployment workflows. Known for persistence, adaptability, and
-              the ability to work continuously for extended periods to achieve
-              project goals.
+              Completed an internship at Saigon Newport Corporation (SNP), where
+              I participated in developing and maintaining internal web
+              applications using React and JavaScript. Gained experience in API
+              integration, responsive UI design, and Agile teamwork with
+              Git/GitHub for version control.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -48,8 +48,8 @@ export const AboutSecion = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg"> Web Development</h4>
                   <p className="text-muted-foreground">
-                    Creating responsive websites and web applications with
-                    modern frameworks.
+                    Building responsive web applications with React, JavaScript,
+                    and Tailwind CSS.
                   </p>
                 </div>
               </div>
@@ -60,10 +60,10 @@ export const AboutSecion = () => {
                   <User className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
+                  <h4 className="font-semibold text-lg">Collaboration</h4>
                   <p className="text-muted-foreground">
-                    Designing intuitive user interfaces and seamless user
-                    experiences.
+                    Experienced in Agile teamwork, API integration, and version
+                    control with Git/GitHub.
                   </p>
                 </div>
               </div>
@@ -75,10 +75,12 @@ export const AboutSecion = () => {
                 </div>
 
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Project Management</h4>
+                  <h4 className="font-semibold text-lg">
+                    Internship Experience
+                  </h4>
                   <p className="text-muted-foreground">
-                    Leading projects from conception to completion with agile
-                    methodologies.
+                    Saigon Newport Corporation (Mar–Jun 2025): contributed to
+                    frontend features, UI optimization, and API integration.
                   </p>
                 </div>
               </div>
