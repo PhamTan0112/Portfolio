@@ -3,19 +3,27 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/public/projects/Saas.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "#",
-    githubUrl: "#",
+    title: "Realtime Chat App",
+    description:
+      "A full-stack realtime chat application built with the MERN stack. Users can send and receive messages instantly using Socket.io, manage authentication with JWT, and experience a responsive UI designed with Tailwind CSS.",
+    image: "/projects/chatapp.png",
+    tags: [
+      "MongoDB",
+      "Express",
+      "React",
+      "Node.js",
+      "Socket.io",
+      "TailwindCSS",
+    ],
+    demoUrl: "https://mern-chat-app-0h5n.onrender.com/login",
+    githubUrl: "https://github.com/PhamTan0112/MERN-chat-app",
   },
   {
     id: 2,
     title: "Hospital Information System",
     description:
       "Cloud-based platform for managing patient records, appointments, billing, and hospital operations with real-time analytics.",
-    image: "/public/projects/healthycare.png",
+    image: "/projects/healthycare.png",
     tags: ["TypeScript", "D3.js", "Next.js"],
     demoUrl: "#",
     githubUrl: "https://github.com/PhamTan0112/HealthycareSystem",
