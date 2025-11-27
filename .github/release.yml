@@ -6,7 +6,7 @@ changelog:
 
   categories:
     - title: "🚀 Features"
-      labels: ["feature", "enhancement"]
+      labels: ["feat", "enhancement"]
     - title: "🐞 Bug Fixes"
       labels: ["bug", "fix"]
     - title: "🛠 Improvements"
