@@ -1,16 +1,32 @@
+name: Release
+
+# Trigger workflow khi push vào main
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   release:
     runs-on: ubuntu-latest
+
     steps:
+      # Checkout code, cần fetch-depth 0 để semantic-release đọc toàn bộ commit history
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Use Node.js 20
+
+      # Cài Node.js version 22.18.0
+      - name: Use Node.js 22
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 22.18.0
+
+      # Cài dependencies
       - run: npm ci
+
+      # Chạy semantic-release với token từ repository secret
       - name: Run semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB  }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
         run: npx semantic-release
