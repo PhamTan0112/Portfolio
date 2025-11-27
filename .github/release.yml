@@ -1,5 +1,10 @@
 # .github/release.yml
+# Configuration for GitHub Automatically Generated Release Notes
+
 changelog:
+  # ------------------------------
+  # EXCLUDE ITEMS (Không đưa vào release notes)
+  # ------------------------------
   exclude:
     labels:
       - "skip-changelog"
@@ -7,6 +12,7 @@ changelog:
       - "invalid"
       - "wontfix"
       - "question"
+      - "no-release"
     authors:
       - "dependabot"
       - "dependabot-preview"
@@ -15,73 +21,89 @@ changelog:
       - "semantic-release"
     branches:
       - "develop"
+      - "dev"
       - "staging"
       - "feature/*"
       - "hotfix/*"
 
+  # ------------------------------
+  # CATEGORY GROUPING (gom nhóm PR vào từng mục)
+  # ------------------------------
   categories:
     - title: "🚀 Breaking Changes"
-      labels:
-        - "breaking-change"
-        - "major"
-      collapse: false
+      labels: ["breaking-change", "major", "breaking"]
 
     - title: "✨ New Features"
-      labels:
-        - "feature"
-        - "enhancement"
-        - "new-feature"
+      labels: ["feature", "enhancement", "new-feature"]
+
+    - title: "🛠 Improvements"
+      labels: ["improvement", "enhance", "polish", "ux", "ui"]
 
     - title: "🐛 Bug Fixes"
-      labels:
-        - "bug"
-        - "fix"
-        - "bugfix"
-        - "hotfix"
-
-    - title: "📚 Documentation"
-      labels:
-        - "documentation"
-        - "docs"
-        - "readme"
+      labels: ["bug", "fix", "bugfix", "hotfix"]
 
     - title: "⚡ Performance"
-      labels:
-        - "performance"
-        - "optimization"
+      labels: ["performance", "perf", "optimization"]
 
-    - title: "🛡️ Security"
-      labels:
-        - "security"
-
-    - title: "🔧 Maintenance"
-      labels:
-        - "chore"
-        - "maintenance"
-        - "refactor"
-        - "dependencies"
+    - title: "📚 Documentation"
+      labels: ["documentation", "docs", "readme"]
 
     - title: "🧪 Tests"
-      labels:
-        - "test"
-        - "testing"
-        - "coverage"
+      labels: ["test", "testing", "coverage"]
 
-    - title: "📦 Build"
-      labels:
-        - "build"
-        - "ci"
-        - "github-actions"
+    - title: "🔧 Maintenance"
+      labels: ["chore", "maintenance", "refactor", "dependencies"]
+
+    - title: "📦 Build & CI/CD"
+      labels: ["build", "ci", "github-actions", "pipeline"]
 
     - title: "🔧 Other Changes"
       labels: ["*"]
 
+  # ------------------------------
+  # TEMPLATE ĐỂ TỰ ĐỘNG GENERATE RELEASE NOTE
+  # ------------------------------
   template: |
-    ## What's Changed
-    $CHANGES
+    # 📝 Release Notes – $TAG_NAME
+
+    📅 **Date:** $RELEASE_DATE  
+    📦 **Build:** $TARGET_COMMITISH  
+
+    ## 🚀 Tổng quan
+    _Tóm tắt nhanh về bản phát hành (có thể viết tay hoặc bỏ trống)._
+
+    ---
+
+    ## ✨ Tính năng mới
+    $CHANGES_FOR_CATEGORY_✨ New Features
+
+    ## 🛠 Cải tiến
+    $CHANGES_FOR_CATEGORY_🛠 Improvements
+
+    ## 🐞 Sửa lỗi
+    $CHANGES_FOR_CATEGORY_🐛 Bug Fixes
+
+    ## ⚡ Tối ưu hiệu năng
+    $CHANGES_FOR_CATEGORY_⚡ Performance
+
+    ## 📚 Tài liệu
+    $CHANGES_FOR_CATEGORY_📚 Documentation
+
+    ## 🧪 Kiểm thử
+    $CHANGES_FOR_CATEGORY_🧪 Tests
+
+    ## 🔧 Bảo trì & Refactor
+    $CHANGES_FOR_CATEGORY_🔧 Maintenance
+
+    ## 📦 Build / CI/CD
+    $CHANGES_FOR_CATEGORY_📦 Build & CI/CD
+
+    ## ⚠️ Breaking Changes
+    $CHANGES_FOR_CATEGORY_🚀 Breaking Changes
+
+    ---
 
     ## 👥 Contributors
-    Thank you to these amazing people who contributed to this release:
     $CONTRIBUTORS
 
-    **Full Changelog**: $FULL_CHANGELOG_URL
+    🔗 **Full Changelog:** $FULL_CHANGELOG_URL
