@@ -1,109 +1,25 @@
-# .github/release.yml
-# Configuration for GitHub Automatically Generated Release Notes
-
 changelog:
-  # ------------------------------
-  # EXCLUDE ITEMS (Không đưa vào release notes)
-  # ------------------------------
   exclude:
-    labels:
-      - "skip-changelog"
-      - "duplicate"
-      - "invalid"
-      - "wontfix"
-      - "question"
-      - "no-release"
-    authors:
-      - "dependabot"
-      - "dependabot-preview"
-      - "github-actions"
-      - "renovate"
-      - "semantic-release"
-    branches:
-      - "develop"
-      - "dev"
-      - "staging"
-      - "feature/*"
-      - "hotfix/*"
+    labels: ["skip-changelog", "duplicate", "invalid", "wontfix", "question"]
+    authors: ["dependabot", "github-actions", "renovate"]
+    branches: ["dev", "feature/*", "hotfix/*"]
 
-  # ------------------------------
-  # CATEGORY GROUPING (gom nhóm PR vào từng mục)
-  # ------------------------------
   categories:
-    - title: "🚀 Breaking Changes"
-      labels: ["breaking-change", "major", "breaking"]
-
-    - title: "✨ New Features"
-      labels: ["feature", "enhancement", "new-feature"]
-
+    - title: "🚀 Features"
+      labels: ["feature", "enhancement"]
+    - title: "🐞 Bug Fixes"
+      labels: ["bug", "fix"]
     - title: "🛠 Improvements"
-      labels: ["improvement", "enhance", "polish", "ux", "ui"]
-
-    - title: "🐛 Bug Fixes"
-      labels: ["bug", "fix", "bugfix", "hotfix"]
-
-    - title: "⚡ Performance"
-      labels: ["performance", "perf", "optimization"]
-
-    - title: "📚 Documentation"
-      labels: ["documentation", "docs", "readme"]
-
-    - title: "🧪 Tests"
-      labels: ["test", "testing", "coverage"]
-
-    - title: "🔧 Maintenance"
-      labels: ["chore", "maintenance", "refactor", "dependencies"]
-
-    - title: "📦 Build & CI/CD"
-      labels: ["build", "ci", "github-actions", "pipeline"]
-
+      labels: ["refactor", "improvement", "ui", "ux"]
     - title: "🔧 Other Changes"
       labels: ["*"]
 
-  # ------------------------------
-  # TEMPLATE ĐỂ TỰ ĐỘNG GENERATE RELEASE NOTE
-  # ------------------------------
   template: |
-    # 📝 Release Notes – $TAG_NAME
+    📅 **Release Date:** $CURRENT_DATE
 
-    📅 **Date:** $RELEASE_DATE  
-    📦 **Build:** $TARGET_COMMITISH  
-
-    ## 🚀 Tổng quan
-    _Tóm tắt nhanh về bản phát hành (có thể viết tay hoặc bỏ trống)._
-
-    ---
-
-    ## ✨ Tính năng mới
-    $CHANGES_FOR_CATEGORY_✨ New Features
-
-    ## 🛠 Cải tiến
-    $CHANGES_FOR_CATEGORY_🛠 Improvements
-
-    ## 🐞 Sửa lỗi
-    $CHANGES_FOR_CATEGORY_🐛 Bug Fixes
-
-    ## ⚡ Tối ưu hiệu năng
-    $CHANGES_FOR_CATEGORY_⚡ Performance
-
-    ## 📚 Tài liệu
-    $CHANGES_FOR_CATEGORY_📚 Documentation
-
-    ## 🧪 Kiểm thử
-    $CHANGES_FOR_CATEGORY_🧪 Tests
-
-    ## 🔧 Bảo trì & Refactor
-    $CHANGES_FOR_CATEGORY_🔧 Maintenance
-
-    ## 📦 Build / CI/CD
-    $CHANGES_FOR_CATEGORY_📦 Build & CI/CD
-
-    ## ⚠️ Breaking Changes
-    $CHANGES_FOR_CATEGORY_🚀 Breaking Changes
-
-    ---
+    $CHANGES
 
     ## 👥 Contributors
     $CONTRIBUTORS
 
-    🔗 **Full Changelog:** $FULL_CHANGELOG_URL
+    🔗 View changes on GitHub: $FULL_CHANGELOG_URL
