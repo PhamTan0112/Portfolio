@@ -1,30 +1,16 @@
-name: Release
-
-on:
-  push:
-    branches:
-      - main
-
 jobs:
   release:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # BẮT BUỘC
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+          fetch-depth: 0
+      - name: Use Node.js 20
+        uses: actions/setup-node@v3
         with:
-          node-version: 18
-
-      - name: Install
-        run: npm ci
-
-      - name: Release
+          node-version: 20
+      - run: npm ci
+      - name: Run semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }} # optional
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
