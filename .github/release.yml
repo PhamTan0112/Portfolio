@@ -1,0 +1,87 @@
+# .github/release.yml
+changelog:
+  exclude:
+    labels:
+      - "skip-changelog"
+      - "duplicate"
+      - "invalid"
+      - "wontfix"
+      - "question"
+    authors:
+      - "dependabot"
+      - "dependabot-preview"
+      - "github-actions"
+      - "renovate"
+      - "semantic-release"
+    branches:
+      - "develop"
+      - "staging"
+      - "feature/*"
+      - "hotfix/*"
+
+  categories:
+    - title: "🚀 Breaking Changes"
+      labels:
+        - "breaking-change"
+        - "major"
+      collapse: false
+
+    - title: "✨ New Features"
+      labels:
+        - "feature"
+        - "enhancement"
+        - "new-feature"
+
+    - title: "🐛 Bug Fixes"
+      labels:
+        - "bug"
+        - "fix"
+        - "bugfix"
+        - "hotfix"
+
+    - title: "📚 Documentation"
+      labels:
+        - "documentation"
+        - "docs"
+        - "readme"
+
+    - title: "⚡ Performance"
+      labels:
+        - "performance"
+        - "optimization"
+
+    - title: "🛡️ Security"
+      labels:
+        - "security"
+
+    - title: "🔧 Maintenance"
+      labels:
+        - "chore"
+        - "maintenance"
+        - "refactor"
+        - "dependencies"
+
+    - title: "🧪 Tests"
+      labels:
+        - "test"
+        - "testing"
+        - "coverage"
+
+    - title: "📦 Build"
+      labels:
+        - "build"
+        - "ci"
+        - "github-actions"
+
+    - title: "🔧 Other Changes"
+      labels: ["*"]
+
+  template: |
+    ## What's Changed
+    $CHANGES
+
+    ## 👥 Contributors
+    Thank you to these amazing people who contributed to this release:
+    $CONTRIBUTORS
+
+    **Full Changelog**: $FULL_CHANGELOG_URL
