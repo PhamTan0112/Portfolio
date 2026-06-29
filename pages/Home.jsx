@@ -1,4 +1,4 @@
-import { AboutSecion } from "../src/components/AboutSection";
+import { AboutSection } from "../src/components/AboutSection";
 import { ContactSection } from "../src/components/ContactSection";
 import { Footer } from "../src/components/Footer";
 import { HeroSection } from "../src/components/HeroSection";
@@ -20,7 +20,7 @@ export const Home = () => {
       {/* Main content */}
       <main>
         <HeroSection />
-        <AboutSecion />
+        <AboutSection />
         <SkillsSection />
         <ProjectsSection />
         <ContactSection />

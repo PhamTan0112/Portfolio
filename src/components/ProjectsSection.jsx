@@ -3,40 +3,30 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Realtime Chat App",
+    title: "Real-Time Chat Application",
     description:
-      "A full-stack realtime chat application built with the MERN stack. Users can send and receive messages instantly using Socket.io, manage authentication with JWT, and experience a responsive UI designed with Tailwind CSS.",
+      "A real-time messaging platform supporting instant communication and online user presence. Built with secure JWT authentication and protected communication channels using Socket.IO.",
     image: "/projects/chatapp.png",
     tags: [
-      "MongoDB",
-      "Express",
-      "React",
-      "Node.js",
-      "Socket.io",
-      "TailwindCSS",
+      "Next.js",
+      "NestJS",
+      "PostgreSQL",
+      "TypeScript",
+      "Socket.IO",
+      "Tailwind CSS",
     ],
-    demoUrl: "https://mern-chat-app-0h5n.onrender.com/login",
-    githubUrl: "https://github.com/PhamTan0112/MERN-chat-app",
+    demoUrl: "#", // Cập nhật link demo nếu có
+    githubUrl: "https://github.com/PhamTan0112/Real-Time-Chat-App", // Giả định dựa trên CV
   },
   {
     id: 2,
-    title: "Hospital Information System",
+    title: "HealthyCare Platform",
     description:
-      "Cloud-based platform for managing patient records, appointments, billing, and hospital operations with real-time analytics.",
+      "A healthcare management platform that streamlines appointment scheduling and patient management workflows. Features include RBAC for secure access and TanStack Query for optimized data synchronization.",
     image: "/projects/healthycare.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+    tags: ["Next.js", "NestJS", "PostgreSQL", "TypeScript", "Tailwind CSS"],
     demoUrl: "#",
     githubUrl: "https://github.com/PhamTan0112/HealthycareSystem",
-  },
-  {
-    id: 3,
-    title: "E-commerce Platform",
-    description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/jewerly.jpg",
-    tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "#",
-    githubUrl: "#",
   },
 ];
 
@@ -49,15 +39,15 @@ export const ProjectsSection = () => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each project was carefully
-          crafted with attention to detail, performance, and user experience.
+          Selected projects highlighting my experience in building real-time applications 
+          and scalable healthcare management systems.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col h-full"
+              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col h-full border border-border"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -81,17 +71,18 @@ export const ProjectsSection = () => {
                 </div>
 
                 {/* Title + Description */}
-                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                <p className="text-muted-foreground text-sm">
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
 
-                {/* Icons luôn nằm đáy */}
+                {/* Icons */}
                 <div className="flex gap-3 mt-auto pt-4">
                   <a
                     href={project.demoUrl}
                     target="_blank"
                     className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                    aria-label="Live Demo"
                   >
                     <ExternalLink size={20} />
                   </a>
@@ -99,6 +90,7 @@ export const ProjectsSection = () => {
                     href={project.githubUrl}
                     target="_blank"
                     className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                    aria-label="GitHub Repository"
                   >
                     <Github size={20} />
                   </a>

@@ -7,29 +7,23 @@ export const HeroSection = () => {
       className="relative min-h-screen flex flex-col items-center justify-center px-4"
     >
       <div className="container max-w-4xl mx-auto text-center z-10">
-        <div className="space-y-6 ">
+        <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
+            <span className="opacity-0 animate-fade-in">Hi, I'm </span>
             <span className="text-primary opacity-0 animate-fade-in-delay-1">
-              {" "}
-              Pham
-            </span>
-            <span className="text-primary opacity-0 animate-fade-in-delay-1">
-              {" "}
-              Phu
-            </span>
-            <span className="text-primary opacity-0 animate-fade-in-delay-1">
-              {" "}
-              Tan
+              Pham Phu Tan
             </span>
           </h1>
+          
+          <h2 className="text-xl md:text-2xl font-semibold text-foreground/80 opacity-0 animate-fade-in-delay-2">
+            Fullstack Developer
+          </h2>
+
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Driven and detail-oriented developer with proven experience
-            delivering high-quality projects in fast-paced, deadline-driven
-            environments. Recognized for maintaining peak performance during
-            extended work periods and bringing innovative problem-solving
-            approaches that set my work apart from peers. Committed to
-            consistently exceeding expectations and driving meaningful results.
+            A detail-oriented Fullstack Developer specializing in building high-concurrency, 
+            real-time web applications. Experienced in developing scalable architectures using 
+            TypeScript, React, Next.js, and NestJS, with a proven track record of optimizing 
+            performance and integrating secure, data-driven enterprise solutions.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
