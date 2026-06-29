@@ -49,7 +49,7 @@ export const AboutSecion = () => {
                   <h4 className="font-semibold text-lg"> Web Development</h4>
                   <p className="text-muted-foreground">
                     Building responsive web applications with React, JavaScript,
-                    and Tailwind CSS.
+                    and Tailwind CSS 123.
                   </p>
                 </div>
               </div>
