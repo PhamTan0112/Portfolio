@@ -1,110 +1,185 @@
-import { Briefcase, Code, User } from "lucide-react";
+import {
+  Briefcase,
+  GraduationCap,
+} from "lucide-react";
+
+const experiences = [
+  {
+    period: "2025 - Present",
+    position: "Full Stack Developer",
+    company: "Thien Van Technologies",
+description: [
+  "Developed high-concurrency real-time access management modules using React, NestJS, PostgreSQL, and WebSockets for IoT monitoring.",
+  "Built interactive dashboards and optimized frontend performance with TypeScript and TanStack Query, improving rendering efficiency and data synchronization.",
+  "Implemented secure authentication and Role-Based Access Control (RBAC), ensuring system integrity and scalable user management.",
+  "Designed optimized database queries and collaborated in Agile/Scrum teams through code reviews and technical documentation."
+]
+  },
+  {
+    period: "2024 - 2025",
+    position: "Frontend Developer",
+    company: "Saigon Newport Corporation",
+description: [
+  "Developed real-time IoT management modules with React, TypeScript, NestJS, PostgreSQL, and WebSockets.",
+  "Built responsive dashboards and data visualization interfaces while optimizing rendering performance for large-scale real-time data.",
+  "Improved application performance by refactoring API fetching and caching with TanStack Query and implementing RBAC authentication.",
+  "Collaborated in Agile/Scrum teams, contributing to code reviews, technical documentation, and scalable system architecture."
+]
+  }
+];
+
+const education = [
+  {
+    period: "2020 - 2024",
+    degree: "Bachelor of Information Technology",
+    school: "Ho Chi Minh City University of Transport",
+    description:
+      "Focused on software engineering, web development, database systems and computer networks."
+  }
+];
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-24 px-4 relative">
+    <section
+      id="about"
+      className="py-24 px-4 relative"
+    >
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-20">
           About <span className="text-primary">Me</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          
-          {/* LEFT CONTENT */}
-          <div className="space-y-6">
-            
-            <h3 className="text-2xl font-semibold">
-              Fullstack Developer
-            </h3>
+        {/* <div className="grid lg:grid-cols-2 gap-16"> */}
+<div className="space-y-20">
+          {/* EXPERIENCE */}
 
-            <p className="text-muted-foreground">
-              I am a Fullstack Developer focused on building modern, high-concurrency 
-              web applications. With a solid foundation in TypeScript, I specialize in 
-              creating dynamic user interfaces using React and Next.js, backed by scalable 
-              backend architectures with Node.js and NestJS.
-            </p>
+          <div>
 
-            <p className="text-muted-foreground">
-              I have practical experience implementing real-time tracking systems via WebSockets, 
-              optimizing data pipelines, and managing complex server states with TanStack Query. 
-              From designing secure role-based access control (RBAC) to integrating IoT dashboards, 
-              I enjoy solving technical challenges within Agile/Scrum team environments.
-            </p>
+            <div className="flex items-center gap-3 mb-10">
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
-              <a href="#contact" className="cosmic-button text-center">
-                Get In Touch
-              </a>
-
-              <a
-                href="/CV/CV_PhamPhuTan.pdf"
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 text-center"
-              >
-                Download CV
-              </a>
-            </div>
-          </div>
-
-          {/* RIGHT CONTENT */}
-          <div className="grid grid-cols-1 gap-6">
-            
-            {/* CARD 1 */}
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Code className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">
-                    Fullstack Ecosystem
-                  </h4>
-                  <p className="text-muted-foreground">
-                    Proficient in TypeScript across the entire stack. Crafting performance-optimized 
-                    frontends (Next.js, Zustand, TanStack Query) and secure backends (NestJS, RESTful APIs, WebSockets).
-                  </p>
-                </div>
+              <div className="p-3 rounded-xl bg-primary/10">
+                <Briefcase className="text-primary w-6 h-6" />
               </div>
+
+              <div>
+                <h3 className="text-2xl font-bold">
+                  Experience
+                </h3>
+
+                <p className="text-muted-foreground text-sm">
+                  Professional Journey
+                </p>
+              </div>
+
             </div>
 
-            {/* CARD 2 */}
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">
-                    Security & Data Optimization
-                  </h4>
-                  <p className="text-muted-foreground">
-                    Experienced in implementing JWT, OAuth2, and complex Role-Based Access Control (RBAC). 
-                    Skilled in designing data processing pipelines and optimizing PostgreSQL/MySQL queries.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <div className="relative border-l border-primary/20 ml-5">
 
-            {/* CARD 3 */}
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Briefcase className="h-6 w-6 text-primary" />
-                </div>
+              {experiences.map((item, index) => (
+                <div
+                  key={index}
+                  className="relative pl-10 pb-12 last:pb-0"
+                >
+                  {/* Timeline Dot */}
 
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">
-                    Enterprise Experience
-                  </h4>
-                  <p className="text-muted-foreground">
-                    Proven track record in developing internal port logistics systems at Saigon Newport Corp 
-                    and high-concurrency real-time IoT access management modules at Thien Van Technologies.
-                  </p>
+                  <div className="absolute -left-[11px] top-2 w-5 h-5 rounded-full bg-primary ring-4 ring-primary/20" />
+
+                  <div className="gradient-border p-6 card-hover">
+
+                    <span className="text-sm text-primary font-medium">
+                      {item.period}
+                    </span>
+
+                    <h4 className="text-xl font-semibold mt-2">
+                      {item.position}
+                    </h4>
+
+                    <p className="text-muted-foreground mb-5">
+                      {item.company}
+                    </p>
+
+                    <ul className="space-y-2">
+                      {item.description.map((text, i) => (
+                        <li
+                          key={i}
+                          className="text-sm text-muted-foreground flex gap-2"
+                        >
+                          <span className="text-primary mt-[6px] w-1.5 h-1.5 rounded-full bg-primary" />
+                          {text}
+                        </li>
+                      ))}
+                    </ul>
+
+                  </div>
+
                 </div>
-              </div>
+              ))}
+
             </div>
 
           </div>
+
+          {/* EDUCATION */}
+
+          <div>
+
+            <div className="flex items-center gap-3 mb-10">
+
+              <div className="p-3 rounded-xl bg-primary/10">
+                <GraduationCap className="text-primary w-6 h-6" />
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold">
+                  Education
+                </h3>
+
+                <p className="text-muted-foreground text-sm">
+                  Academic Background
+                </p>
+              </div>
+
+            </div>
+
+            <div className="relative border-l border-primary/20 ml-5">
+
+              {education.map((item, index) => (
+                <div
+                  key={index}
+                  className="relative pl-10"
+                >
+                  <div className="absolute -left-[11px] top-2 w-5 h-5 rounded-full bg-primary ring-4 ring-primary/20" />
+
+                  <div className="gradient-border p-6 card-hover">
+
+                    <span className="text-sm text-primary font-medium">
+                      {item.period}
+                    </span>
+
+                    <h4 className="text-xl font-semibold mt-2">
+                      {item.degree}
+                    </h4>
+
+                    <p className="text-muted-foreground">
+                      {item.school}
+                    </p>
+
+                    <p className="text-sm text-muted-foreground mt-4 leading-7">
+                      {item.description}
+                    </p>
+
+                  </div>
+
+                </div>
+              ))}
+
+            </div>
+
+          </div>
+
         </div>
+
       </div>
     </section>
   );
